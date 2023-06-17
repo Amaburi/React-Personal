@@ -6,11 +6,11 @@ import {styles} from '../style';
 import {services} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
 
-
+import { SectionWrapper } from '../hoc';
 
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[220px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -21,7 +21,7 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[240px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
@@ -47,7 +47,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        Just A regular human that likes to do an interesting things.
+        Just A regular human that likes to do an interesting things.Also an RPG games Enthusiast
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
@@ -59,4 +59,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About, "about")
