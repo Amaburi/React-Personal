@@ -1,4 +1,5 @@
 import {
+    astroo,
     mobile,
     backend,
     creator,
@@ -23,8 +24,11 @@ import {
     jobit,
     tripguide,
     threejs,
+    elib,
+    momoanimek
 } from "../assets";
-  
+
+
   export const navLinks = [
     {
       id: "about",
@@ -198,67 +202,72 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Astroo the Article Summarizer",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "With The Power of Rapid Api and React.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
+          name: "React",
+          color: "orange-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: astroo,
+      source_code_link: "https://github.com/Amaburi/Reactttttt/tree/Satu/ai",
     },
     {
-      name: "Job IT",
+      name: "E-Ticket",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+          "Android App for operator to print out the ticket that the user has been ordered.",
       tags: [
         {
-          name: "react",
+          name: "Dart",
           color: "blue-text-gradient",
         },
         {
           name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
+          color: "black-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: momoanimek,
+      source_code_link: "https://github.com/Amaburi/Flutter-E-ticket",
     },
     {
-      name: "Trip Guide",
+      name: "UniBox",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "An Android app for children to learn about our solar system with a quiz in it.",
       tags: [
         {
-          name: "nextjs",
+          name: "Express",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "React Native",
+          color: "green-text-gradient",
+        },
+      ],
+      image: momoanimek,
+      source_code_link: "https://github.com/Amaburi/Universe",
+    },
+    {
+      name: "E-Lib",
+      description:
+        "A web where you can borrow book and there's a dashboard admin too.",
+      tags: [
+        {
+          name: "Php",
+          color: "black-gradient",
+        },
+        {
+          name: "Laravel",
           color: "green-text-gradient",
         },
         {
-          name: "css",
-          color: "pink-text-gradient",
+          name: "Bootstrap",
+          color: "orange-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: elib,
+      source_code_link: "https://github.com/Amaburi/E-Lib",
     },
   ];
   
