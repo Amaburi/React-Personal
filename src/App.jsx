@@ -14,6 +14,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        {/* You can uncomment below if want to add Testimonial from your colleague */}
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />

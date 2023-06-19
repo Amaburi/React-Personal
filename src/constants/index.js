@@ -204,7 +204,7 @@ import {
     {
       name: "Astroo the Article Summarizer",
       description:
-        "With The Power of Rapid Api and React.",
+        "With The Power of Rapid Api and React. You can Summarize any article you want with it.",
       tags: [
         {
           name: "React",
