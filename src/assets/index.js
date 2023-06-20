@@ -31,7 +31,13 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import momoanimek from './momoanimek.jpg';
 import astroo from './astroo.png';
+import SmkTelkom from './SmkTelom.png';
+import Jy from './Jy.png';
+import JyCakep from './JyCakep.png';
 export {
+  JyCakep,
+  Jy,
+  SmkTelkom,
   astroo,
   momoanimek,
   elib,

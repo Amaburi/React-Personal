@@ -6,10 +6,13 @@ import { styles } from '../style';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
-// 
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 // 
 // 
 const Contact = () => {
+  let timerInterval;
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -33,7 +36,13 @@ const Contact = () => {
       message: form.message
     }, 'qegHFdZGuA1a7lSx8').then(()=>{
       setLoading(false);
-      alert('Thank you for contacting me i will reply it as soon as possible');
+      Swal.fire({
+        icon: 'success',
+        title: 'Your Message successfully sent',
+        showConfirmButton: false,
+        timer: 3000,
+        text: 'Thanks For Contacting me i will reply it as soon as possible'
+      })     
       setForm({
         name: '',
         email: '',
@@ -42,7 +51,32 @@ const Contact = () => {
     }, (error)=>{
       setLoading(false);
       console.log(error);
-      alert('Something went Wrong try it again later....')
+      // Swal.fire({
+      //   icon: 'error',
+      //   title: 'Oops...',
+      //   text: 'Something went wrong. Please try again later.',
+      // });
+      Swal.fire({
+        title: 'Error Has Occured Please Try again Later!!!',
+        html: 'I will close in <b></b> milliseconds.',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
     })
   }
   return (
